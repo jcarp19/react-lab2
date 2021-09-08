@@ -11,7 +11,7 @@ export default function PostForm({onClose, onSubmit}: {onClose: () => void, onSu
                 onSubmit(title, thought);
                 onClose()
             }}>
-                <i className="fas fa-times-circle" onClick={() => {onClose()}}/>
+                <i aria-label="close" role="button" className="fas fa-times-circle" onClick={() => {onClose()}}/>
                 <label htmlFor="">Title</label>
                 <input aria-label="title" role="textbox" type="text" name="" id="" onChange={(event) => {setTitle(event.target.value)}} />
                 <label htmlFor="">Thought</label>
