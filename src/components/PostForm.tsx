@@ -1,11 +1,14 @@
+import {useState} from "react";
 import "./PostForm.css";
 
-export default function PostForm({onClose, setTitle, setThought, onSubmit}: {onClose: () => void, setTitle: React.Dispatch<React.SetStateAction<string>>, setThought: React.Dispatch<React.SetStateAction<string>>, onSubmit: () => void}) {
+export default function PostForm({onClose, onSubmit}: {onClose: () => void, onSubmit: (title: string, thought: string) => void}) {
+    const [title, setTitle] = useState("");
+    const [thought, setThought] = useState("");
     return (
         <div className="modal">
             <form onSubmit={(e) => {
                 e.preventDefault();
-                onSubmit();
+                onSubmit(title, thought);
                 onClose()
             }}>
                 <i className="fas fa-times-circle" onClick={() => {onClose()}}/>

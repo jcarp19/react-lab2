@@ -20,7 +20,7 @@ export default function SocialPosts() {
         copiedPosts.splice(i,1);
         setPosts(copiedPosts);
     }
-    function onSubmit() {
+    function onSubmit(title: string, thought: string) {
         // copy then modify
         let copiedPosts = [...posts];
         copiedPosts.unshift({"title": title, "thought":thought}) 
@@ -31,7 +31,7 @@ export default function SocialPosts() {
             <h1>My Thoughts</h1>
 
             <button onClick={() => {setFormIsVisible(true)}}>New Thought</button>
-            {formIsVisible && <PostForm setTitle={setTitle} setThought={setThought} onClose={() => {setFormIsVisible(false)}} onSubmit={() => {onSubmit()}} />}
+            {formIsVisible && <PostForm onClose={() => {setFormIsVisible(false)}} onSubmit={onSubmit} />}
             <div className="postContainer">
                 {posts.map((post, index) => (
                     <PostInList key={index} post={post} onDelete={() => {deletePost(index)}} />

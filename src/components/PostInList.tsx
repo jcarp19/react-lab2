@@ -12,7 +12,7 @@ export default function PostInList({post, onDelete}: Props) {
                 <h3>{post.title}</h3>
                 <p>{post.thought}</p>
             </div>
-            <i className="fas fa-trash" onClick={() => {onDelete()}}></i>
+            <i aria-label="onDelete" role="button" className="fas fa-trash" onClick={() => {onDelete()}}></i>
         </div>
     )
 };
