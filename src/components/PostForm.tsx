@@ -13,10 +13,10 @@ export default function PostForm({onClose, onSubmit}: {onClose: () => void, onSu
             }}>
                 <i className="fas fa-times-circle" onClick={() => {onClose()}}/>
                 <label htmlFor="">Title</label>
-                <input type="text" name="" id="" onChange={(event) => {setTitle(event.target.value)}} />
+                <input aria-label="title" role="textbox" type="text" name="" id="" onChange={(event) => {setTitle(event.target.value)}} />
                 <label htmlFor="">Thought</label>
-                <textarea name="" id="" onChange={(event) => {setThought(event.target.value)}}></textarea>
-                <button type="submit">Add Post</button>
+                <textarea aria-label="thought" role="textarea" name="" id="" onChange={(event) => {setThought(event.target.value)}}></textarea>
+                <button aria-label="submit" role="button" type="submit">Add Post</button>
             </form>
         </div>
     )
