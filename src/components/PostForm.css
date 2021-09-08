@@ -1,0 +1,45 @@
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, .75);
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+    background-color: #79c5e8;
+    padding: 2em;
+    box-sizing: border-box;
+}
+form i {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+}
+label {
+    margin-bottom: .5em;
+}
+input, textarea {
+    margin-bottom: 1em;
+    border-radius: 7px;
+    padding: 1em;
+    box-sizing: border-box;
+}
+textarea {
+    height: 100px;
+}
+form > button {
+    background-color: #f3f1f7;
+    color: #222222;
+}
